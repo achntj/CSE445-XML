@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- 
+  CSE 445 Assignment 4 XML - Hotels.xsd
+-->
 <schema 
     xmlns="http://www.w3.org/2001/XMLSchema"
     targetNamespace="https://achntj.github.io/CSE445-XML/Hotels.xsd"
@@ -7,6 +9,7 @@
     elementFormDefault="qualified" 
     attributeFormDefault="unqualified">
 
+    <!-- Root element "Hotels" containing one or more "Hotel" elements -->
     <element name="Hotels">
         <complexType>
             <sequence>
@@ -15,6 +18,13 @@
         </complexType>
     </element>
     
+    <!-- 
+      Hotel element structure:
+      - Must have exactly one Name
+      - Must have at least one Phone (can have multiple)
+      - Must have exactly one Address
+      - May have one Rating (optional)
+    -->
     <element name="Hotel">
         <complexType>
             <sequence>
@@ -26,6 +36,12 @@
         </complexType>
     </element>
 
+    <!-- 
+      Address element structure:
+      - Must have all sub-elements (Number, Street, City, State, Zip)
+      - NearstAirport is optional (minOccurs="0")
+      - Follows the parent-child element relations shown in Figure 1
+    -->
     <element name="Address">
         <complexType>
             <sequence>

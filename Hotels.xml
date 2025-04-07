@@ -1,165 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  CSE 445 Assignment 4 XML - Hotels.xml
+  This file contains hotel information following the schema defined in Hotels.xsd
+  It includes at least 10 real hotels with required elements and attributes
+  Some hotels have optional Rating elements
+  Multiple phone numbers are provided for some hotels
+-->
 <Hotels xmlns="https://achntj.github.io/CSE445-XML/Hotels.xsd"
         xmlns:bs="https://achntj.github.io/CSE445-XML/Hotels.xsd"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://achntj.github.io/CSE445-XML/Hotels.xsd">
+    <!-- Sample hotel with all required elements and multiple phone numbers -->
     <Hotel>
-        <Name>Westin</Name>
-        <Phone>480-968-8885</Phone>
-        <Phone>800-937-8461</Phone>
+        <Name>Marriott Marquis</Name>
+        <Phone>212-398-1900</Phone>
+        <Phone>888-236-2427</Phone>
         <Address>
-            <Number>11</Number>
-            <Street>E 7th St</Street>
-            <City>Tempe</City>
-            <State>AZ</State>
-            <Zip>85281</Zip>
-            <NearstAirport>Sky Habor</NearstAirport>
-        </Address>
-        <Rating>4.2</Rating>
-    </Hotel>
-
-    <Hotel>
-        <Name>Bellagio</Name>
-        <Phone>702-693-7111</Phone>
-        <Phone>888-987-6667</Phone>
-        <Address>
-            <Number>3600</Number>
-            <Street>S Las Vegas Blvd</Street>
-            <City>Las Vegas</City>
-            <State>NV</State>
-            <Zip>89109</Zip>
-            <NearstAirport>McCarran International Airport</NearstAirport>
-        </Address>
-        <Rating>4.7</Rating>
-    </Hotel>
-
-    <Hotel>
-        <Name>The Plaza</Name>
-        <Phone>212-759-3000</Phone>
-        <Address>
-            <Number>768</Number>
-            <Street>5th Ave</Street>
+            <Number>1535</Number>
+            <Street>Broadway</Street>
             <City>New York</City>
             <State>NY</State>
-            <Zip>10019</Zip>
-            <NearstAirport>LaGuardia Airport</NearstAirport>
-        </Address>
-        <Rating>4.6</Rating>
-    </Hotel>
-
-    <Hotel>
-        <Name>Ritz-Carlton Los Angeles</Name>
-        <Phone>213-743-8800</Phone>
-        <Phone>800-241-3333</Phone>
-        <Address>
-            <Number>900</Number>
-            <Street>W Olympic Blvd</Street>
-            <City>Los Angeles</City>
-            <State>CA</State>
-            <Zip>90015</Zip>
-            <NearstAirport>Los Angeles International Airport</NearstAirport>
-        </Address>
-        <Rating>4.8</Rating>
-    </Hotel>
-
-    <Hotel>
-        <Name>Hilton Hawaiian Village</Name>
-        <Phone>808-949-4321</Phone>
-        <Phone>800-445-8667</Phone>
-        <Address>
-            <Number>2005</Number>
-            <Street>Kalia Rd</Street>
-            <City>Honolulu</City>
-            <State>HI</State>
-            <Zip>96815</Zip>
-            <NearstAirport>Honolulu International Airport</NearstAirport>
+            <Zip>10036</Zip>
+            <NearstAirport>JFK International Airport</NearstAirport>
         </Address>
         <Rating>4.5</Rating>
     </Hotel>
 
+    <!-- Hotel with required elements and single phone number -->
     <Hotel>
-        <Name>Hyatt Regency Chicago</Name>
-        <Phone>312-565-1234</Phone>
-        <Phone>800-233-1234</Phone>
+        <Name>Four Seasons Resort Maui</Name>
+        <Phone>808-874-8000</Phone>
         <Address>
-            <Number>151</Number>
-            <Street>E Wacker Dr</Street>
-            <City>Chicago</City>
-            <State>IL</State>
-            <Zip>60601</Zip>
-            <NearstAirport>O'Hare International Airport</NearstAirport>
+            <Number>3900</Number>
+            <Street>Wailea Alanui Dr</Street>
+            <City>Wailea</City>
+            <State>HI</State>
+            <Zip>96753</Zip>
+            <NearstAirport>Kahului Airport</NearstAirport>
+        </Address>
+        <Rating>4.9</Rating>
+    </Hotel>
+
+    <!-- Hotel without Rating element (optional) -->
+    <Hotel>
+        <Name>Fairmont San Francisco</Name>
+        <Phone>415-772-5000</Phone>
+        <Phone>866-540-4491</Phone>
+        <Address>
+            <Number>950</Number>
+            <Street>Mason St</Street>
+            <City>San Francisco</City>
+            <State>CA</State>
+            <Zip>94108</Zip>
+            <NearstAirport>SFO International Airport</NearstAirport>
+        </Address>
+    </Hotel>
+
+    <!-- Hotel with all required elements -->
+    <Hotel>
+        <Name>Mandarin Oriental Miami</Name>
+        <Phone>305-913-8288</Phone>
+        <Phone>866-888-6780</Phone>
+        <Address>
+            <Number>500</Number>
+            <Street>Brickell Key Dr</Street>
+            <City>Miami</City>
+            <State>FL</State>
+            <Zip>33131</Zip>
+            <NearstAirport>Miami International Airport</NearstAirport>
+        </Address>
+        <Rating>4.7</Rating>
+    </Hotel>
+
+    <!-- Hotel with single phone number -->
+    <Hotel>
+        <Name>Omni Dallas Hotel</Name>
+        <Phone>214-744-6664</Phone>
+        <Address>
+            <Number>555</Number>
+            <Street>S Lamar St</Street>
+            <City>Dallas</City>
+            <State>TX</State>
+            <Zip>75202</Zip>
+            <NearstAirport>DFW International Airport</NearstAirport>
         </Address>
         <Rating>4.4</Rating>
     </Hotel>
 
+    <!-- Hotel without Rating element -->
     <Hotel>
-        <Name>Sheraton Boston</Name>
-        <Phone>617-236-2000</Phone>
-        <Phone>888-627-7054</Phone>
+        <Name>Gaylord Opryland Resort</Name>
+        <Phone>615-889-1000</Phone>
+        <Phone>866-972-6779</Phone>
         <Address>
-            <Number>39</Number>
-            <Street>Dalton St</Street>
-            <City>Boston</City>
-            <State>MA</State>
-            <Zip>02199</Zip>
-            <NearstAirport>Logan International Airport</NearstAirport>
+            <Number>2800</Number>
+            <Street>Opryland Dr</Street>
+            <City>Nashville</City>
+            <State>TN</State>
+            <Zip>37214</Zip>
+            <NearstAirport>Nashville International Airport</NearstAirport>
         </Address>
     </Hotel>
 
+    <!-- Hotel with high rating -->
     <Hotel>
-        <Name>The Broadmoor</Name>
-        <Phone>719-634-7711</Phone>
-        <Phone>855-634-7711</Phone>
+        <Name>St. Regis Aspen Resort</Name>
+        <Phone>970-920-3300</Phone>
+        <Phone>877-787-3447</Phone>
         <Address>
-            <Number>1</Number>
-            <Street>Lake Ave</Street>
-            <City>Colorado Springs</City>
+            <Number>315</Number>
+            <Street>E Dean St</Street>
+            <City>Aspen</City>
             <State>CO</State>
-            <Zip>80906</Zip>
-            <NearstAirport>Colorado Springs Airport</NearstAirport>
+            <Zip>81611</Zip>
+            <NearstAirport>Aspen-Pitkin County Airport</NearstAirport>
         </Address>
+        <Rating>4.8</Rating>
     </Hotel>
 
+    <!-- Hotel with single phone number -->
     <Hotel>
-        <Name>Hotel del Coronado</Name>
-        <Phone>619-435-6611</Phone>
-        <Phone>800-468-3533</Phone>
+        <Name>Loews Philadelphia Hotel</Name>
+        <Phone>215-627-1200</Phone>
         <Address>
-            <Number>1500</Number>
-            <Street>Orange Ave</Street>
-            <City>Coronado</City>
-            <State>CA</State>
-            <Zip>92118</Zip>
-            <NearstAirport>San Diego International Airport</NearstAirport>
-        </Address>
-    </Hotel>
-
-    <Hotel>
-        <Name>Grand Hyatt Seattle</Name>
-        <Phone>206-774-1234</Phone>
-        <Address>
-            <Number>721</Number>
-            <Street>Pine St</Street>
-            <City>Seattle</City>
-            <State>WA</State>
-            <Zip>98101</Zip>
-            <NearstAirport>Seattle-Tacoma International Airport</NearstAirport>
+            <Number>1200</Number>
+            <Street>Market St</Street>
+            <City>Philadelphia</City>
+            <State>PA</State>
+            <Zip>19107</Zip>
+            <NearstAirport>Philadelphia International Airport</NearstAirport>
         </Address>
         <Rating>4.3</Rating>
     </Hotel>
 
+    <!-- Hotel without Rating element -->
     <Hotel>
-        <Name>Waldorf Astoria Orlando</Name>
-        <Phone>407-597-5500</Phone>
-        <Phone>888-353-2009</Phone>
+        <Name>Renaissance Austin Hotel</Name>
+        <Phone>512-343-2626</Phone>
+        <Phone>800-468-3571</Phone>
         <Address>
-            <Number>14200</Number>
-            <Street>Bonnet Creek Resort Lane</Street>
-            <City>Orlando</City>
-            <State>FL</State>
-            <Zip>32821</Zip>
-            <NearstAirport>Orlando International Airport</NearstAirport>
+            <Number>9721</Number>
+            <Street>Arboretum Blvd</Street>
+            <City>Austin</City>
+            <State>TX</State>
+            <Zip>78759</Zip>
+            <NearstAirport>Austin-Bergstrom International Airport</NearstAirport>
+        </Address>
+    </Hotel>
+
+    <!-- Hotel with all required elements -->
+    <Hotel>
+        <Name>Grand Hyatt Washington</Name>
+        <Phone>202-582-1234</Phone>
+        <Phone>888-421-1442</Phone>
+        <Address>
+            <Number>1000</Number>
+            <Street>H St NW</Street>
+            <City>Washington</City>
+            <State>DC</State>
+            <Zip>20001</Zip>
+            <NearstAirport>Reagan National Airport</NearstAirport>
         </Address>
         <Rating>4.6</Rating>
+    </Hotel>
+
+    <!-- Hotel with all required elements -->
+    <Hotel>
+        <Name>InterContinental Boston</Name>
+        <Phone>617-747-1000</Phone>
+        <Phone>800-424-6835</Phone>
+        <Address>
+            <Number>510</Number>
+            <Street>Atlantic Ave</Street>
+            <City>Boston</City>
+            <State>MA</State>
+            <Zip>02210</Zip>
+            <NearstAirport>Logan International Airport</NearstAirport>
+        </Address>
+        <Rating>4.5</Rating>
     </Hotel>
 </Hotels>

@@ -1,147 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  CSE 445 Assignment 4 XML - HotelsErrors.xml
+  This file contains ONLY the 5 required error cases for testing XML validation:
+  1. Root element name is "Hotel" instead of "Hotels" (ERROR #1)
+  2. Missing required Phone element (The Jefferson - ERROR #3)
+  3. Unclosed Address tag (St. Regis - ERROR #4)
+  4. Duplicate Name elements (Ritz-Carlton - ERROR #5)
+  5. Missing required Rating attribute (some hotels - ERROR #2)
+-->
 <Hotel xmlns="https://achntj.github.io/CSE445-XML/Hotels.xsd"
        xmlns:bs="https://achntj.github.io/CSE445-XML/Hotels.xsd"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="https://achntj.github.io/CSE445-XML/Hotels.xsd">
+
+    <!-- ERROR #1: Root element should be "Hotels" not "Hotel" (entire file) -->
     
-    <Hotel Rating="4.2">
-        <Name>Westin</Name>
-        <Address>
-            <Number>11</Number>
-            <Street>E.7th St</Street>
-            <City>Tempe</City>
-            <State>AZ</State>
-            <Zip>85281</Zip>
-        </Address>
-        <Phone>480-968-8885</Phone>
-        <Phone>800-937-8461</Phone>
-    </Hotel>
-    
+    <!-- ERROR #3: Missing Phone element -->
     <Hotel Rating="4.7">
-        <Name>Bellagio</Name>
-        <Name>Bellagio</Name>
-        <Address NearstAirport="McCarran International Airport">
-            <Number>3600</Number>
-            <Street>S Las Vegas Blvd</Street>
-            <City>Las Vegas</City>
-            <State>NV</State>
-            <Zip>89109</Zip>
+        <Name>The Jefferson</Name>
+        <Address NearstAirport="Reagan National Airport">
+            <Number>1200</Number>
+            <Street>16th St NW</Street>
+            <City>Washington</City>
+            <State>DC</State>
+            <Zip>20036</Zip>
         </Address>
-        <Phone>702-693-7111</Phone>
-        <Phone>888-987-6667</Phone>
+        <!-- Missing required Phone element -->
     </Hotel>
-    
-    <Hotel Rating="4.6">
-        <Name>The Plaza</Name>
-        <Address NearstAirport="LaGuardia Airport">
-            <Number>768</Number>
-            <Street>5th Ave</Street>
-            <City>New York</City>
-            <State>NY</State>
-            <Zip>10019</Zip>
-        </Address>
-    </Hotel>
-    
-    <Hotel Rating="4.8">
-        <Name>Ritz-Carlton Los Angeles</Name>
-        <Address NearstAirport="Los Angeles International Airport">
-            <Number>900</Number>
-            <Street>W Olympic Blvd</Street>
-            <City>Los Angeles</City>
+
+    <!-- ERROR #4: Unclosed Address tag -->
+    <Hotel Rating="4.9">
+        <Name>St. Regis</Name>
+        <Address NearstAirport="San Francisco International Airport">
+            <Number>125</Number>
+            <Street>3rd St</Street>
+            <City>San Francisco</City>
             <State>CA</State>
-            <Zip>90015</Zip>
-        </Address>
-        <Phone>213-743-8800</Phone>
-        <Phone>800-241-3333</Phone>
+            <Zip>94103</Zip>
+        <!-- Missing closing </Address> tag -->
+        <Phone>415-284-4000</Phone>
+        <Phone>888-627-7147</Phone>
     </Hotel>
-    
-    <Hotel Rating="4.5">
-        <Name>Hilton Hawaiian Village</Name>
-        <Address NearstAirport="Honolulu International Airport">
-            <Number>2005</Number>
-            <Street>Kalia Rd</Street>
-            <City>Honolulu</City>
-            <State>HI</State>
-            <Zip>96815</Zip>
-        </Address>
-        <Phone>808-949-4321</Phone>
-        <Phone>800-445-8667</Phone>
-    </Hotel>
-    
-    <Hotel Rating="4.4">
-        <Name>Hyatt Regency Chicago</Name>
-        <Address NearstAirport="O'Hare International Airport">
-            <Number>151</Number>
-            <Street>E Wacker Dr</Street>
-            <City>Chicago</City>
-            <State>IL</State>
-            <Zip>60601</Zip>
-        </Address>
-        <Phone>312-565-1234</Phone>
-        <Phone>800-233-1234</Phone>
-    </Hotel>
-    
-    <Hotel>
-        <Name>Sheraton Boston</Name>
+
+    <!-- ERROR #5: Duplicate Name elements -->
+    <Hotel Rating="4.8">
+        <Name>Ritz-Carlton</Name>
+        <Name>Ritz-Carlton</Name> <!-- Duplicate Name element -->
         <Address NearstAirport="Logan International Airport">
-            <Number>39</Number>
-            <Street>Dalton St</Street>
+            <Number>10</Number>
+            <Street>Avery St</Street>
             <City>Boston</City>
             <State>MA</State>
-            <Zip>02199</Zip>
+            <Zip>02111</Zip>
         </Address>
-        <Phone>617-236-2000</Phone>
-        <Phone>888-627-7054</Phone>
+        <Phone>617-574-7100</Phone>
     </Hotel>
-    
-    <Hotel>
-        <Name>The Broadmoor</Name>
-        <Address NearstAirport="Colorado Springs Airport">
-            <Number>1</Number>
-            <Street>Lake Ave</Street>
-            <City>Colorado Springs</City>
-            <State>CO</State>
-            <Zip>80906</Zip>
+
+    <!-- ERROR #2: Missing required Rating attribute (should be present on all hotels) -->
+    <Hotel> <!-- Missing Rating attribute -->
+        <Name>Peninsula Chicago</Name>
+        <Address NearstAirport="O'Hare International Airport">
+            <Number>108</Number>
+            <Street>E Superior St</Street>
+            <City>Chicago</City>
+            <State>IL</State>
+            <Zip>60611</Zip>
         </Address>
-        <Phone>719-634-7711</Phone>
-        <Phone>855-634-7711</Phone>
+        <Phone>312-337-2888</Phone>
+        <Phone>866-288-8889</Phone>
     </Hotel>
-    
-    <Hotel>
-        <Name>Hotel del Coronado</Name>
-        <Address NearstAirport="San Diego International Airport">
-            <Number>1500</Number>
-            <Street>Orange Ave</Street>
-            <City>Coronado</City>
-            <State>CA</State>
-            <Zip>92118</Zip>
-        </Address>
-        <Phone>619-435-6611</Phone>
-        <Phone>800-468-3533</Phone>
-    </Hotel>
-    
-    <Hotel>
-        <Name>Grand Hyatt Seattle</Name>
-        <Address NearstAirport="Seattle-Tacoma International Airport">
-            <Number>721</Number>
-            <Street>Pine St</Street>
-            <City>Seattle</City>
-            <State>WA</State>
-            <Zip>98101</Zip>
-        </Address>
-        <Phone>206-774-1234</Phone>
-    </Hotel>
-    
-    <Hotel Rating="4.6">
-        <Name>Waldorf Astoria Orlando</Name>
-        <Address NearstAirport="Orlando International Airport">
-            <Number>14200</Number>
-            <Street>Bonnet Creek Resort Lane</Street>
-            <City>Orlando</City>
-            <State>FL</State>
-            <Zip>32821</Zip>
-        <Phone>407-597-5500</Phone>
-        <Phone>888-353-2009</Phone>
-    </Hotel>
-    
 </Hotel>
